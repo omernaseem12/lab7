@@ -10,7 +10,12 @@ questions = {
     "Science": [
         ("What is the chemical symbol for water?", "H2O"),
         # Add more questions as tuples (question, answer)
+        ("What is the chemical symbol for oxygen?", "O")
     ],
+    "Math": [
+        ("What is 2+2=?", "4"),
+        ("What is 3*3=?", "9")
+    ]
 }
 
 hints = {
@@ -35,6 +40,8 @@ def select_random_question(category):
     #------------------------
     # Add your code here
     #------------------------
+    question = random.choice(questions[category])
+    return question
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
