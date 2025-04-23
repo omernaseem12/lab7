@@ -37,6 +37,9 @@ def display_leaderboard(leaderboard):
     """
     #------------------------
     # Add your code here
+    if len[leaderboard]=0:
+        print("no scores to display")
+        
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
