@@ -127,7 +127,8 @@ def update_score(score, correct):
     - int: The updated score.
     """
     #------------------------
-    # Add your code here
+    if correct == True:
+        score +=1
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -145,7 +146,7 @@ def next_round(round_number):
     - int: The next round number.
     """
     #------------------------
-    # Add your code here
+    round = round +1
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -163,7 +164,8 @@ def check_game_over(incorrect_answers):
     - bool: True if the game should be over, False otherwise.
     """
     #------------------------
-    # Add your code here
+    if incorrect_answers>=3 :
+        return True
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
