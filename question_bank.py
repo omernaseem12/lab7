@@ -10,7 +10,12 @@ questions = {
     "Science": [
         ("What is the chemical symbol for water?", "H2O"),
         # Add more questions as tuples (question, answer)
+        ("What is the chemical symbol for oxygen?", "O")
     ],
+    "Math": [
+        ("What is 2+2=?", "4"),
+        ("What is 3*3=?", "9")
+    ]
 }
 
 hints = {
@@ -35,6 +40,8 @@ def select_random_question(category):
     #------------------------
     # Add your code here
     #------------------------
+    question = random.choice(questions[category])
+    return question
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
@@ -54,6 +61,11 @@ def check_answer(player_answer, correct_answer):
     #------------------------
     # Add your code here
     #------------------------
+    correct_answer = select_random_question(category)[1]
+    if player_answer == correct_answer:
+        return True
+    else:
+        return False
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
@@ -73,6 +85,8 @@ def remove_question(category, question):
     #------------------------
     # Add your code here
     #------------------------
+    question = (select_random_question(category)
+    questions[category].remove(question)
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
@@ -91,6 +105,7 @@ def display_question_and_accept_answer(question):
     #------------------------
     # Add your code here
     #------------------------
+    return question[1]
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
@@ -110,6 +125,8 @@ def provide_hint(category, question):
     #------------------------
     # Add your code here
     #------------------------
+    hint = hints[category]
+    return hint
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
@@ -128,6 +145,8 @@ def display_correct_answer(correct_answer):
     #------------------------
     # Add your code here
     #------------------------
+    if check_answer(player_answer, correct_answer) == False:
+        print(correct_answer)
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
