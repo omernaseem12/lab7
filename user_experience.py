@@ -16,6 +16,8 @@ def choose_difficulty():
     """
     #------------------------
     # Add your code here
+    diff=input()
+    return diff
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
