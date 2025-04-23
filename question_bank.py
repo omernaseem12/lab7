@@ -85,6 +85,8 @@ def remove_question(category, question):
     #------------------------
     # Add your code here
     #------------------------
+    question = (select_random_question(category)
+    questions[category].remove(question)
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
@@ -103,6 +105,7 @@ def display_question_and_accept_answer(question):
     #------------------------
     # Add your code here
     #------------------------
+    return question[1]
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
@@ -122,6 +125,8 @@ def provide_hint(category, question):
     #------------------------
     # Add your code here
     #------------------------
+    hint = hints[category]
+    return hint
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
@@ -140,6 +145,8 @@ def display_correct_answer(correct_answer):
     #------------------------
     # Add your code here
     #------------------------
+    if check_answer(player_answer, correct_answer) == False:
+        print(correct_answer)
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
