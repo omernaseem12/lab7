@@ -16,6 +16,8 @@ def choose_difficulty():
     """
     #------------------------
     # Add your code here
+    diff=input()
+    return diff
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -35,6 +37,9 @@ def display_leaderboard(leaderboard):
     """
     #------------------------
     # Add your code here
+    if len[leaderboard]=0:
+        print("no scores to display")
+        
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
