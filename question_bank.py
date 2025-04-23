@@ -61,6 +61,11 @@ def check_answer(player_answer, correct_answer):
     #------------------------
     # Add your code here
     #------------------------
+    correct_answer = select_random_question(category)[1]
+    if player_answer == correct_answer:
+        return True
+    else:
+        return False
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
 
