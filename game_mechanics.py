@@ -12,7 +12,7 @@ def welcome_message():
     Returns: None
     """
     #------------------------
-    # Add your code here
+    print("Welcome to Trivia Trek")
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -29,7 +29,10 @@ def choose_category(categories):
     - str: The chosen category.
     """
     #------------------------
-    # Add your code here
+    c = 0
+    for cat in categories:
+        print(f'{c+1}, {cat}')
+    return categories[int(input("Select Category"))-1]
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -47,7 +50,8 @@ def display_score(score, round_number):
     Returns: None
     """
     #------------------------
-    # Add your code here
+    print("Status")
+    print(f'Score: {score} ---- Round {round_number}')
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -64,7 +68,7 @@ def game_over_message(final_score):
     Returns: None
     """
     #------------------------
-    # Add your code here
+    print(f'Game Over -- Score {final_score}')
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -81,7 +85,8 @@ def run_game_rounds(categories):
     Returns: None
     """
     #------------------------
-    # Add your code here
+    for i in range(5):
+        pass
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -100,7 +105,10 @@ def validate_answer(player_answer, correct_answer):
     - bool: True if the player's answer is correct, False otherwise.
     """
     #------------------------
-    # Add your code here
+    if player_answer.lower() == correct_answer.lower():
+        return True
+    else:
+        return False
     #------------------------
     raise NotImplementedError("This function is not implemented yet.")
     #------------------------
@@ -176,3 +184,4 @@ def restart_or_exit():
     #------------------------
 
 #---------------------------------------
+categories = ["Science", "Math"]
